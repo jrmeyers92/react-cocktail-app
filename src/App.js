@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search/Search";
+import DrinkList from "./DrinkList/DrinkList";
 
 function App() {
 	const [searchFormTerm, setSearchFormTerm] = useState("");
@@ -22,6 +23,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Search searchFormSubmit={searchFormSubmit} />
+			<DrinkList drinks={drinkArray} />
 		</div>
 	);
 }

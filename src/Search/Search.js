@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Search.css";
 
 const Search = (props) => {
@@ -15,7 +15,8 @@ const Search = (props) => {
 				type='text'
 				value={searchTerm}
 				onChange={(e) => setSearchTerm(e.target.value)}
-				id='searchInput'></input>
+				id='searchInput'
+				placeholder='Search a type of drink'></input>
 		</form>
 	);
 };

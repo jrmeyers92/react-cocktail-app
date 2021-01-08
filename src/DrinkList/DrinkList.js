@@ -1,17 +1,25 @@
 import React from "react";
 import "./DrinkList.css";
-import Drink from "./Drink/Drink";
+// import Drink from "./Drink/Drink";
 
 const DrinkList = (props) => {
-	const i = props.drinks.map((drink) => {
-		return (
-			<div>
-				<h3>{drink.strDrink}</h3>
-			</div>
-		);
-	});
+	let drinks = props.drinks.drinks;
+	let list;
 
-	return <div>{i}</div>;
+	if (drinks) {
+		list = drinks.map((drink) => {
+			console.log(drink);
+			return (
+				<div key={drink.idDrink}>
+					<h2>{drink.strDrink}</h2>{" "}
+					<img alt={drink.strDrink} src={drink.strDrinkThumb}></img>
+					<button>Details</button>
+				</div>
+			);
+		});
+	}
+
+	return <div>{list}</div>;
 };
 
 export default DrinkList;

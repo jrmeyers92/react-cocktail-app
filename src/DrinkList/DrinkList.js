@@ -1,5 +1,6 @@
 import React from "react";
 import "./DrinkList.css";
+import { Link } from "react-router-dom";
 // import Drink from "./Drink/Drink";
 
 const DrinkList = (props) => {
@@ -8,13 +9,13 @@ const DrinkList = (props) => {
 
 	if (drinks) {
 		list = drinks.map((drink) => {
-			console.log(drink);
 			return (
-				<div key={drink.idDrink}>
-					<h2>{drink.strDrink}</h2>{" "}
-					<img alt={drink.strDrink} src={drink.strDrinkThumb}></img>
-					<button>Details</button>
-				</div>
+				<Link to={`/cocktail/${drink.idDrink}`}>
+					<div key={drink.idDrink}>
+						<h2>{drink.strDrink}</h2>{" "}
+						<img alt={drink.strDrink} src={drink.strDrinkThumb}></img>
+					</div>
+				</Link>
 			);
 		});
 	}

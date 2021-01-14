@@ -18,9 +18,9 @@ function App() {
 	return (
 		<Router>
 			<div className='App'>
-				<Search searchFormSubmit={searchFormSubmit} />
 				<Switch>
 					<Route path='/' exact>
+						<Search searchFormSubmit={searchFormSubmit} />
 						<DrinkList drinks={drinkArray} />
 					</Route>
 					<Route path='/cocktail/:name' component={Drink}></Route>

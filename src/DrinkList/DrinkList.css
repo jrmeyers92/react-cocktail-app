@@ -1,3 +1,34 @@
+.drinkList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.drink {
+	min-width: 25%;
+	display: flex;
+	text-decoration: none;
+	margin: 20px;
+	border: 1px solid black;
+	align-items: center;
+	justify-content: center;
+}
+
+.drinkDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.drinkHeader {
+	max-width: 80%;
+	text-align: center;
+	color: black;
+}
+
 img {
 	height: 200px;
+	border-radius: 50%;
 }

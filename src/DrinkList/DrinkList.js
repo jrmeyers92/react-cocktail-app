@@ -10,9 +10,9 @@ const DrinkList = (props) => {
 	if (drinks) {
 		list = drinks.map((drink) => {
 			return (
-				<Link to={`/cocktail/${drink.idDrink}`}>
-					<div key={drink.idDrink}>
-						<h2>{drink.strDrink}</h2>{" "}
+				<Link to={`/cocktail/${drink.idDrink}`} className='drink'>
+					<div key={drink.idDrink} className='drinkDiv'>
+						<h2 className='drinkHeader'>{drink.strDrink}</h2>{" "}
 						<img alt={drink.strDrink} src={drink.strDrinkThumb}></img>
 					</div>
 				</Link>
@@ -20,7 +20,7 @@ const DrinkList = (props) => {
 		});
 	}
 
-	return <div>{list}</div>;
+	return <div className='drinkList'>{list}</div>;
 };
 
 export default DrinkList;

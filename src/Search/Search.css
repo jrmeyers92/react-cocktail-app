@@ -9,4 +9,12 @@
 	width: 50%;
 	height: 30px;
 	font-size: 18px;
+	border: none;
+	background-color: rgb(244, 235, 235);
+}
+
+.searchInput:focus,
+.searchInput:active {
+	border: none;
+	outline: none;
 }

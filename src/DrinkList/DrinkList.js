@@ -12,8 +12,8 @@ const DrinkList = (props) => {
 			return (
 				<Link to={`/cocktail/${drink.idDrink}`} className='drink'>
 					<div key={drink.idDrink} className='drinkDiv'>
-						<h2 className='drinkHeader'>{drink.strDrink}</h2>{" "}
 						<img alt={drink.strDrink} src={drink.strDrinkThumb}></img>
+						<h2 className='drinkHeader'>{drink.strDrink}</h2>{" "}
 					</div>
 				</Link>
 			);

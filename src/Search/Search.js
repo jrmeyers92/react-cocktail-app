@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Search.css";
 
 const Search = (props) => {
@@ -8,6 +8,12 @@ const Search = (props) => {
 		e.preventDefault();
 		props.searchFormSubmit(searchTerm);
 	};
+
+	useEffect(() => {
+		setTimeout(() => {
+			props.searchFormSubmit(searchTerm);
+		}, 2000);
+	});
 
 	return (
 		<form onSubmit={formSubmit} className='search'>

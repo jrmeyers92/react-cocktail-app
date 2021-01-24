@@ -6,6 +6,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
 	const [drinkArray, setDrinkArray] = useState([]);
+	const [favoriates, setFavoriates] = useState([]);
+
+	const createDrinkFavoriate = () => {
+		console.log("working");
+	};
 
 	const searchFormSubmit = async (term) => {
 		await fetch(
@@ -21,7 +26,10 @@ function App() {
 				<Switch>
 					<Route path='/' exact>
 						<Search searchFormSubmit={searchFormSubmit} />
-						<DrinkList drinks={drinkArray} />
+						<DrinkList
+							drinks={drinkArray}
+							createDrinkFavoriate={createDrinkFavoriate}
+						/>
 					</Route>
 					<Route path='/cocktail/:name' component={Drink}></Route>
 				</Switch>

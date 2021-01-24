@@ -10,10 +10,14 @@ const Search = (props) => {
 	};
 
 	useEffect(() => {
+		props.searchFormSubmit("");
+	}, []);
+
+	useEffect(() => {
 		setTimeout(() => {
 			props.searchFormSubmit(searchTerm);
-		}, 2000);
-	});
+		}, 1000);
+	}, [searchTerm]);
 
 	return (
 		<form onSubmit={formSubmit} className='search'>

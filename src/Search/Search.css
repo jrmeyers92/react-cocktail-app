@@ -10,7 +10,10 @@
 	height: 30px;
 	font-size: 18px;
 	border: none;
-	background-color: rgb(244, 235, 235);
+	background-color: rgb(221, 221, 221);
+	padding: 0.4rem;
+	border-radius: 5px;
+	box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
 .searchInput:focus,

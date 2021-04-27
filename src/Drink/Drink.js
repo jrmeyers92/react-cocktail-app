@@ -5,10 +5,6 @@ const Drink = (match) => {
 	const [name, setName] = useState({});
 	const id = match.match.params.name;
 
-	const heartClick = () => {
-		document.querySelector(".fa-heart").classList.toggle("clicked");
-	};
-
 	const fetchItem = async () => {
 		await fetch(
 			`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
@@ -29,9 +25,9 @@ const Drink = (match) => {
 		return (
 			<div key={id} className='drank'>
 				<div className='drankContainer'>
-					<i class='fas fa-heart' onClick={heartClick}></i>
+					<i class='fas fa-heart'></i>
 					<div className='drank__left'>
-						<img src={name.strDrinkThumb} alt='picture of drink' />
+						<img src={name.strDrinkThumb} alt={name.strDrink} />
 					</div>
 					<div className='drank__right'>
 						<h2>{name.strDrink}</h2>
